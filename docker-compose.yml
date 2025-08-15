@@ -1,0 +1,11 @@
+services:
+  mcp-gateway-github:
+    image: docker/mcp-gateway:latest
+    use_api_socket: true
+    command:
+      - --verbose
+      - --transport=streaming
+      - --servers=github
+      - --port=8080
+    ports:
+      - "8080:8080"
